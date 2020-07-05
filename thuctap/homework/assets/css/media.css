@@ -1,0 +1,22 @@
+/* @media only screen and (max-width: 576px) {
+    .section_4 div.col-md{
+        margin: auto;
+    }
+} */
+
+/* @media only screen and (max-width: 768px) {
+    [class*="col-"] {
+      width: 100%;
+    }
+  } */
+
+@media only screen and (max-width: 560px){
+    .inner-page{
+        width: 100%;
+    }
+    
+    .footer .footer_aside ul{
+        text-align: center;
+        margin: auto;
+    }
+}
