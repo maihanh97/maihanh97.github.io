@@ -7,10 +7,7 @@ nav,ul.li{
     margin: 0;
 }
 
-.col-md-6{
-    max-width: 43%;
-    max-height: 20%;
-}
+
 
 /*                         HEADER      */
 
@@ -71,12 +68,10 @@ div.alert{
     line-height: 23px;
     
 }
-
 .header .nav ul li a:hover{
     text-decoration: none;
     color: #307BE7;
 }
-
 .nav .dhyd_logo .slogan{
     display: inline-block;
     font-weight: 700;
@@ -100,18 +95,15 @@ div.alert{
     font-weight: 600;
     color: #4d4d4d;
 }
-
 .header .nav ul .select_service button{
     border: 1px solid #307BE7;
     border-radius: 15px;
     color: #307BE7;
     font-size: 12px;
 }
-
 .header .nav ul .select_service button:hover{
     background-color: #fff;
 }
-
 .nav ul .select_service .dropdown-menu li{
     font-size: 11px;
     text-align: left;
@@ -135,8 +127,6 @@ div.alert{
     margin-bottom: 50px;
     position: relative;
 }
-
-
 .section_1 .list_dv{
     background-color: rgba(0, 0, 0, 0.6);
     position: absolute;
@@ -157,12 +147,10 @@ div.alert{
     width: 26%;
     text-align: center;
 }
-
 .section_1 .list_dv ul li:last-child{
     display: block;
     margin: auto;
 }
-
 .section_1 .list_dv ul li a{
     color: #fff;
     font-size: 12px;
@@ -181,40 +169,55 @@ div.alert{
 
 
 /*            SECTION_2 Q_A          */
+.section_2 .col-md-6{
+    max-width: 47%;
+}
+ .section_2{
+    max-width: 1140px;
+    margin: auto;
+}
 
-
-.main .section_2 .row {
+ .section_2 .row {
     position: relative;
 }
-.main .section_2 .row div{
+ .section_2 .row div{
     border: 1px solid #BFD5DE;
     border-radius: 5px;
     padding-left: 5.625em;
     padding-top: 1.25em;
-    margin: 0 2.2em;
+    margin: 0 17px;
 }
-.main .section_2 .row div:hover{
+ .section_2 .row div:hover{
     border-color: #639BE4;
     transform: translateZ(0);
     transform: translateY(-2px);
     transition: 0.3s ;
 }
 
-.main .section_2 .row div a:hover{
+ .section_2 .row div a:hover{
     text-decoration: none;
 }
-.main .section_2 .row div .pos_right{
+ .section_2 .row div .pos_right{
     text-align: right;
 }
-.main .section_2 .row div a,p,h3,li{
+ .section_2 .row div a,p,h3,li{
     font-size: 13px;
     color: black;
 }
-.main .section_2 .row div h3{
+ .section_2 .row div h3{
     color: #307BE7;
     font-weight: 700;
 }
-.main .section_2 .row div.search_info::before{
+
+ .section_2 .row div.search_info button{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    width: 43%;
+    text-align: center;
+}
+
+ .section_2 .row div.search_info::before{
     content: "";
     background: url("../img/icons/search.png") no-repeat 50%;
     width: 50px;
@@ -224,7 +227,7 @@ div.alert{
     left:25px;
 }
 
-.main .section_2 .row div.trouble::before{
+ .section_2 .row div.trouble::before{
     content: "";
     background: url("../img/icons/troubles.png") no-repeat 50%;
     width: 50px;
@@ -234,40 +237,40 @@ div.alert{
     left: 25px;
 }
 
-.main .section_2 .row .trouble li{
+ .section_2 .row .trouble li{
     list-style-type: none;
     padding-left: 10px;
 }
 
-.main .section_2 .row .trouble .trouble_list{
+ .section_2 .row .trouble .trouble_list{
     position: relative;
     padding-left: 0;
 }
-.main .section_2 .row .trouble .trouble_list li.trouble_1::before{
+ .section_2 .row .trouble .trouble_list li.trouble_1::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
     width: 5px;
     height: 5px;
-    top: 46px;
+    top: 27px;
     left: -2px;
 }
-.main .section_2 .row .trouble .trouble_list li.trouble_2::before{
+ .section_2 .row .trouble .trouble_list li.trouble_2::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
     width: 5px;
     height: 5px;
-    top: 66px;
+    top: 47px;
     left: -2px;
 }
-.main .section_2 .row .trouble .trouble_list li.trouble_3::before{
+ .section_2 .row .trouble .trouble_list li.trouble_3::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
     width: 5px;
     height: 5px;
-    top: 86px;
+    top: 67px;
     left: -2px;
 }
 

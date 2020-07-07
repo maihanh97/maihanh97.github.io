@@ -1,34 +1,6 @@
-/* @media only screen and (max-width: 576px) {
-    .section_4 div.col-md{
-        margin: auto;
-    }
-} */
 
-/* @media only screen and (max-width: 768px) {
-    [class*="col-"] {
-      width: 100%;
-    }
-  } */
-
-/* @media only screen and (max-width: 560px){
-    .inner-page{
-        width: 100%;
-    }
-    
-    .footer .footer_aside ul{
-        text-align: center;
-        margin: auto;
-    }
-} */
-
-
-
-
-
-/*             SECTION_1 screen_slide           */
-
+/*             SECTION_1 screen_slide           */   
 @media only screen and (max-width: 640px){
-    
     .section_1 .carousel-item img{
         max-width: fit-content;
         height: 400px;
@@ -46,11 +18,12 @@
         padding: 12px 15px;
         margin-top: 10px;
     }
+
 }
 
 
+
 @media only screen and (min-width: 641px) and (max-width: 991px){
-    
     .section_1 .carousel-item img{
         max-width: fit-content;
         height: 400px;
@@ -71,8 +44,7 @@
 
 }
 
-@media only screen and (min-width: 991px){
-    
+@media only screen and (min-width: 991px){ 
     .section_1 .carousel-item img{
         max-width: fit-content;
         height: 400px;
@@ -97,3 +69,44 @@
         margin: auto;
     }
 }
+
+
+
+
+/*              section_2 Q_A           */
+
+@media only screen and (max-width: 767px){
+    
+    .section_2 .col-md-6{
+        max-width: 90%;
+        height: 175px;
+    }
+    .section_2 .row div{
+        margin:10px auto;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1102px){
+    .section_2 .col-md-6{
+        max-width: 47%;
+        height: 175px;
+    }
+
+    .section_2 .row div{
+        margin: auto;
+    }
+
+}
+    
+
+/*            SECTION_3         */
+
+@media only screen and (max-width:767px){
+    .section_3 .app_content .list_two *{
+        overflow: hidden;
+    }
+}
+
+
+
