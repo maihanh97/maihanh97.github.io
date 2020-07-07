@@ -48,6 +48,8 @@ nav,ul.li{
 div.alert{
     border: 1px solid #B8DAFF;
     background-color: #CCE5FF;
+    max-width: 1140px;
+    margin: auto;
 }
 
 
@@ -65,12 +67,9 @@ div.alert{
 .header .nav ul li{
     display: inline-block;
     margin: 0;
-    padding: 0 1em;
+    padding: 0 11px;
     line-height: 23px;
     
-}
-.header .nav ul li.dhyd_logo{
-    padding-left: 77px;
 }
 
 .header .nav ul li a:hover{
@@ -120,8 +119,15 @@ div.alert{
 
 
 /*            MAIN            */
+.main{
+    margin-top: 10px;
+}
+
 .main .inner_main .main_top{
     padding: 0;
+    max-width: 1140px;
+    margin: auto;
+
 }
 
 /* SECTION_1 */
@@ -136,7 +142,7 @@ div.alert{
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 120px;
+    height: 7.5em;
     
 }
 .section_1 .list_dv ul{
@@ -144,19 +150,24 @@ div.alert{
 }
 .section_1 .list_dv ul li{
     display: inline-block;
-    width: auto;
     border: 1px solid #fff;
-    padding: 12px 1em;
+    padding: 12px 15px;
     background-color: #3370C8;
-    margin: 7px 91px;
-    width: 33.33%;text-align: center;
-    align-items: center;
+    margin: 7px 40px;
+    width: 26%;
+    text-align: center;
 }
+
+.section_1 .list_dv ul li:last-child{
+    display: block;
+    margin: auto;
+}
+
 .section_1 .list_dv ul li a{
     color: #fff;
     font-size: 12px;
     font-weight: 700;
-    max-width: 300px;
+    max-width: 18.75em;
     
 }
 .section_1 .list_dv ul li:hover{
@@ -166,52 +177,44 @@ div.alert{
     text-decoration: none;
 }
 
-/* @media only screen and (max-width: 576px) {
-    .section_1 .list_dv{
-        height: 200px;
-    }
-    .section_1 .list_dv ul li{
-        max-width: 200px;
-    }
-  } */
 
 
 
 /*            SECTION_2 Q_A          */
 
 
-.main section.Q_A .row {
+.main .section_2 .row {
     position: relative;
 }
-.main section.Q_A .row div{
+.main .section_2 .row div{
     border: 1px solid #BFD5DE;
     border-radius: 5px;
-    padding-left: 90px;
+    padding-left: 5.625em;
     padding-top: 1.25em;
-    margin: 0px 35px;
+    margin: 0 2.2em;
 }
-.main section.Q_A .row div:hover{
+.main .section_2 .row div:hover{
     border-color: #639BE4;
     transform: translateZ(0);
     transform: translateY(-2px);
     transition: 0.3s ;
 }
 
-.main section.Q_A .row div a:hover{
+.main .section_2 .row div a:hover{
     text-decoration: none;
 }
-.main section.Q_A .row div .pos_right{
+.main .section_2 .row div .pos_right{
     text-align: right;
 }
-.main section.Q_A .row div a,p,h3,li{
+.main .section_2 .row div a,p,h3,li{
     font-size: 13px;
     color: black;
 }
-.main section.Q_A .row div h3{
+.main .section_2 .row div h3{
     color: #307BE7;
     font-weight: 700;
 }
-.main section.Q_A .row div.search_info::before{
+.main .section_2 .row div.search_info::before{
     content: "";
     background: url("../img/icons/search.png") no-repeat 50%;
     width: 50px;
@@ -221,7 +224,7 @@ div.alert{
     left:25px;
 }
 
-.main section.Q_A .row div.trouble::before{
+.main .section_2 .row div.trouble::before{
     content: "";
     background: url("../img/icons/troubles.png") no-repeat 50%;
     width: 50px;
@@ -231,16 +234,16 @@ div.alert{
     left: 25px;
 }
 
-.main section.Q_A .row .trouble li{
+.main .section_2 .row .trouble li{
     list-style-type: none;
     padding-left: 10px;
 }
 
-.main section.Q_A .row .trouble .trouble_list{
+.main .section_2 .row .trouble .trouble_list{
     position: relative;
     padding-left: 0;
 }
-.main section.Q_A .row .trouble .trouble_list li.trouble_1::before{
+.main .section_2 .row .trouble .trouble_list li.trouble_1::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
@@ -249,7 +252,7 @@ div.alert{
     top: 46px;
     left: -2px;
 }
-.main section.Q_A .row .trouble .trouble_list li.trouble_2::before{
+.main .section_2 .row .trouble .trouble_list li.trouble_2::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
@@ -258,7 +261,7 @@ div.alert{
     top: 66px;
     left: -2px;
 }
-.main section.Q_A .row .trouble .trouble_list li.trouble_3::before{
+.main .section_2 .row .trouble .trouble_list li.trouble_3::before{
     content: "";
     background: url("../img/icons/arr-right.svg") no-repeat 100%;
     position: absolute;
