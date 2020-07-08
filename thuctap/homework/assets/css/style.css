@@ -217,7 +217,11 @@ div.alert{
     right: 15px;
     width: 43%;
     text-align: center;
+    border: 1px solid #307BE7;
+    background-color: #307BE7;
+    color: white;
 }
+
 
  .section_2 .row div.search_info::before{
     content: "";
