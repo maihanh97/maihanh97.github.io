@@ -27,7 +27,7 @@ nav,ul.li{
 }
 
 .header .nav_top .support li:last-child{
-    padding-right: 3.5em;
+    margin-right: 4.75em;
 }
 
 .header .nav_top .support li a{
@@ -39,7 +39,9 @@ nav,ul.li{
     color: #28a745;
     text-decoration: none;
 }
-
+.header .nav_top .support li:last-child a:hover{
+    color: white;
+}
 /*               ALERT            */
 
 div.alert{
@@ -356,7 +358,10 @@ section.section_3 .app_content{
 
 
 /*            SECTION_4          */
-
+.main_bottom{
+    max-width: 1140px;
+    margin: auto;
+}
 
 .section_4{
     margin-bottom: 50px;
@@ -385,7 +390,8 @@ section.section_3 .app_content{
 
 
 .section_4 .col-md{
-    max-width: 200px;padding:48px 0;
+    max-width: 18%;
+    padding:48px 0;
 }
 .section_4 div.col-md{
     /* border: 1px solid #E3E6F0; */
