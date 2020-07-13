@@ -104,7 +104,9 @@
 
 @media only screen and (max-width:767px){
     .section_3 .app_content .list_two *{
+        display: flex;
         overflow: hidden;
+        flex-wrap: wrap;
     }
 }
 
@@ -123,4 +125,14 @@
         max-width: 30%;
     }
 
+}
+
+
+
+/*              Footer-aside               */
+
+@media only screen and (max-width: 767px){
+    .footer .footer_aside ul{
+         text-align: center;
+    }
 }

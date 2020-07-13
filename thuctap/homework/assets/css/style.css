@@ -1,11 +1,13 @@
 body{
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Nunito", Arial, "Helvetica Neue", Helvetica, serif, sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav,ul.li{
-    padding: 0;
-    margin: 0;
-}
 
 
 
@@ -350,7 +352,7 @@ section.section_3 .app_content{
     margin: 0px auto;
     position: absolute;
     top: -474px;
-    left: -16px;
+    left: -30px;
     right: 0;
 }
 
@@ -441,8 +443,10 @@ section.section_3 .app_content{
 
 /*             FOOTER             */
 
-.inner_footer{
+.footer .inner_footer .footer-top{
     position: relative;
+    max-width: 1140px;
+    margin: auto;
 }
 /*            FOOTER-MAIN         */
 
@@ -529,7 +533,7 @@ section.section_3 .app_content{
     background-color: #2368CC;
     width: 100%;
     position: absolute;
-    height: 3.5em;
+    height: auto;
 }
 
 .footer .footer_aside ul{
