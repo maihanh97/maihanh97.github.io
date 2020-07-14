@@ -102,11 +102,16 @@
 
 /*            SECTION_3         */
 
+@media only screen and (max-width:1200px){
+    .section_3{
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width:767px){
     .section_3 .app_content .list_two *{
         display: flex;
         overflow: hidden;
-        flex-wrap: wrap;
     }
 }
 

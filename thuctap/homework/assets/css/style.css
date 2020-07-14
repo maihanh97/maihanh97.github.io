@@ -29,7 +29,7 @@ body{
 }
 
 .header .nav_top .support li:last-child{
-    margin-right: 4.75em;
+    margin-right: 70px;
 }
 
 .header .nav_top .support li a{
@@ -58,7 +58,7 @@ div.alert{
 /*               START   NAV-BAR           */
 
 .header .nav{
-    padding: 1em 0;
+    padding: 10px;
     
 }
 /* .bg-dark{
@@ -72,16 +72,22 @@ div.alert{
     align-items: center;
     position: absolute;
 }
-.header .nav ul li{
+.header .nav ul li.nav-item{
     display: inline-block;
     margin: 0;
-    padding: 0 11px;
+    padding: 0 5px;
     line-height: 23px;
     
 }
-.header .nav ul li a:hover{
+.header .nav ul li.nav-item:first-child{
+    margin-left: 65px;
+}
+.header .nav ul li.nav-item a{
+    color: #4d4d4d!important;
+}
+.header .nav ul li.nav-item a:hover{
     text-decoration: none;
-    color: #307BE7;
+    color: #307BE7!important;
 }
 .header .nav .dhyd_logo{
     display: inline-block;
@@ -115,9 +121,14 @@ div.alert{
 .header .nav ul .select_service button:hover{
     background-color: #fff;
 }
+.nav ul .select_service .dropdown{
+    width: 180px;
+}
+
 .nav ul .select_service .dropdown-menu li{
     font-size: 11px;
     text-align: left;
+    padding:0 10px;
 }
 
 
@@ -581,4 +592,46 @@ section.section_3 .app_content{
 .footer .fixed i{
     font-size: 60px;
     margin: -4px 5px ;
+}
+
+
+/*         Aside-info        */
+
+aside.contact-info{
+    width: 87px;
+    position: sticky;
+    background-color: #307BE7;
+    left: 92%;
+    bottom: 50%;
+    height: auto;border-radius: 10px;
+}
+aside.contact-info ul{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+aside.contact-info li{
+    list-style-type: none;
+}
+
+aside.contact-info li *{
+    color: #fff;
+    font-size: 23px;
+}
+aside.contact-info li span{
+    font-size: 14px;
+}
+aside.contact-info li span.phonenumber{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+aside.contact-info li i:hover,
+aside.contact-info li span:hover{
+    color:#28a745 ;
+}
+
+aside.contact-info .phone-contact{
+    display: block;
 }
