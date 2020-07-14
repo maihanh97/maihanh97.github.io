@@ -56,14 +56,21 @@ div.alert{
 
 
 /*               START   NAV-BAR           */
+
 .header .nav{
     padding: 1em 0;
+    
 }
+/* .bg-dark{
+    background-color: white!important;
+} */
+
 .header .nav ul{
     padding-left: 0;
     font-size: 13px;
     margin-bottom: 0;
     align-items: center;
+    position: absolute;
 }
 .header .nav ul li{
     display: inline-block;
@@ -76,22 +83,22 @@ div.alert{
     text-decoration: none;
     color: #307BE7;
 }
-.nav .dhyd_logo .slogan{
+.header .nav .dhyd_logo{
     display: inline-block;
     font-weight: 700;
 }
-.nav .dhyd_logo .slogan span{
+.header .nav .dhyd_logo span{
     display: block;
 }
-.nav .dhyd_logo .slogan .style_1{
+.header .nav .dhyd_logo .style_1{
     color: #2957a4;
     font-size: 12px;
 }
-.nav .dhyd_logo .slogan .style_2{
+.header .nav .dhyd_logo  .style_2{
     font-size: 11px;
     color: #6d6e71;    
 }
-.nav .dhyd_logo .slogan .style_3{
+.header .nav .dhyd_logo  .style_3{
     font-size: 11px;
     color: #6cc3e6;
 }
