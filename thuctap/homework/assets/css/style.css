@@ -338,6 +338,12 @@ section.section_3 .app_content{
  .app_mobile_download ul li.list_one{
     text-align: right;
 }
+.app_mobile_download ul li.list_one img{
+    order: 1;
+}
+.app_mobile_download ul li.list_one{
+    text-align: right;
+}
  .app_mobile_download ul li.list_three .group{
     align-items: center;
     display: flex;
