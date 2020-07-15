@@ -102,16 +102,18 @@
 
 /*            SECTION_3         */
 
-@media only screen and (max-width:1200px){
+@media only screen and (min-width:768px) and (max-width:1200px){
     .section_3{
         width: 100%;
+    }
+    .section_3 .col-4{
+        width: auto;
     }
 }
 
 @media only screen and (max-width:767px){
-    .section_3 .app_content .list_two *{
-        display: flex;
-        overflow: hidden;
+    .section_3 .app_content .list_two{
+        display: none;
     }
 }
 

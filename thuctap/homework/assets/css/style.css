@@ -38,7 +38,7 @@ body{
 }
 
 .header .nav_top .support li a:hover{
-    color: #28a745;
+    color: #32f853;
     text-decoration: none;
 }
 .header .nav_top .support li:last-child a:hover{
@@ -146,7 +146,7 @@ div.alert{
 
 /* SECTION_1 */
 .section_1{
-    margin-bottom: 50px;
+    margin: 30px 0;
     position: relative;
 }
 .section_1 .list_dv{
@@ -181,7 +181,7 @@ div.alert{
     
 }
 .section_1 .list_dv ul li:hover{
-    background-color: #7CF5A4;
+    background-color: #00c877;
 }
 .section_1 .list_dv ul li a:hover{
     text-decoration: none;
@@ -312,9 +312,6 @@ section.section_3 .app_content{
     padding-top: 1.25em;
 }
 
-.section_3 .container>div{
-    padding-bottom: 25px;
-}
 .app_mobile_download .app_title p{ 
     font-size: 32px;
     color: #4d4d4d;
@@ -361,11 +358,15 @@ section.section_3 .app_content{
     font-size: 16px;
 }
 
+.section_3 .app_content li.col-4{
+    max-height: 500px;
+}
+
 .section_3 .app_content .list_two .carousel{
     position: relative;
 }
 .section_3 .app_content .list_two .carousel-inner{
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 203px;
     margin: 0px auto;
     position: absolute;
@@ -387,10 +388,7 @@ section.section_3 .app_content{
     margin: auto;
 }
 
-.section_4{
-    margin-bottom: 50px;
-    
-}
+
 .section_4 .method-support{
     margin: auto;
     text-align: center;
@@ -474,7 +472,6 @@ section.section_3 .app_content{
     background-image: url("../img/footer/footer-bg.png")  ;
     background-repeat: repeat-x;
     background-size: contain;
-    margin-top: 90px;
     padding: 30px 0;
 }
 
@@ -497,7 +494,7 @@ section.section_3 .app_content{
 
 .footer .footer_main .column-1 span a:hover{
     text-decoration: none;
-    color: #28a745;
+    color: #32f853;
 }
 
 /* ========== Column-2 ==========*/
@@ -513,7 +510,7 @@ section.section_3 .app_content{
 }
 .footer .footer_main .column-2 li a:hover{
     text-decoration: none;
-    color: #28a745;
+    color: #32f853;
 }
 .footer .footer_main .column-2 li:first-child{
     padding-top: 0;
@@ -574,7 +571,7 @@ section.section_3 .app_content{
 }
 .footer .footer_aside ul li a:hover{
     text-decoration: none;
-    color: #28a745;
+    color: #32f853;
 }
 
 
@@ -602,36 +599,37 @@ aside.contact-info{
     position: sticky;
     background-color: #307BE7;
     left: 92%;
-    bottom: 50%;
-    height: auto;border-radius: 10px;
-}
-aside.contact-info ul{
+    bottom: 30%;
+    border-radius: 10px;
+    margin-bottom: 0;
     text-align: center;
     padding: 10px;
-    margin-bottom: 0;
+    line-height: 30px;
 }
 
-aside.contact-info li{
-    list-style-type: none;
-}
-
-aside.contact-info li *{
+aside.contact-info a{
     color: #fff;
     font-size: 23px;
+    display: block;
 }
-aside.contact-info li span{
+aside.contact-info a span{
     font-size: 14px;
 }
-aside.contact-info li span.phonenumber{
+aside.contact-info a span.phonenumber{
     font-size: 16px;
     font-weight: 700;
 }
 
-aside.contact-info li i:hover,
-aside.contact-info li span:hover{
-    color:#28a745 ;
+aside.contact-info a:hover,
+aside.contact-info a span:hover,
+aside.contact-info a.btn-navigation:hover{
+    color:#32f853 ;
+    text-decoration: none;
 }
 
-aside.contact-info .phone-contact{
-    display: block;
+aside.contact-info a.btn-navigation{
+    position: absolute;
+    color: #307BE7;
+    bottom: -40px;
+    right: 30px;
 }
