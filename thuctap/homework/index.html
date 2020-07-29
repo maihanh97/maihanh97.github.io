@@ -223,7 +223,6 @@
                             </section>
 
                         </div>
-
                         <div  style=" max-width: 100%; border-top: 5px solid #e9ecef; margin-bottom: 150px;">
                         </div>
 
@@ -274,7 +273,7 @@
                             </section>
                         </div>
 
-                        <aside class="contact-info">
+                        <aside id="" class="contact-info scroll">
                             <div class="collapse">
                                 <a class="up-to-top" href="#"><i class="fas fa-arrow-circle-up"></i></a>
                                 <a class="mailbox" href="#"><i class="fas fa-envelope"></i></a>
@@ -286,7 +285,6 @@
                                         </div>
                                 </a>    
                             </div>
-                            
                             <a  class="btn-navigation js_click"><i class="fas fa-angle-double-right"></i></a>
                         </aside>
                     </div>
@@ -360,6 +358,27 @@
     </div>
 
     <script src="assets/js/click.js"></script>
+    <script> 
+        $(document).ready(function(){
+
+            $(window).scroll(function(event) {
+            var pos_body = $('html,body').scrollTop();
+            
+            
+            if(pos_body>50){
+                $('.scroll').addClass('contact-info');
+            }
+            else{
+                $('.scroll').removeClass('contact-info');
+            }
+        });
+        $('.scroll').click(function(event) {
+            $('html,body').animate({scrollTop: 0},500);
+        });
+        });
+    </script>
+    <script src="assets/js/scoll-to-top.js"></script>
+
 </body>
 
 </html>
