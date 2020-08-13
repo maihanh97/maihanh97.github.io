@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $(".btn-click-bg").focusin(function(){
+        $(this).css({
+            "background":"#307BE7",
+            "color":"white"
+        })
+    })
+    $(".btn-click-bg").focusout(function(){
+        $(this).css({
+            "background":"white",
+            "color":"#307BE7"
+        })
+    })
+});
