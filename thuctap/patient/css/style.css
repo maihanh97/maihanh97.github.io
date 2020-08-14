@@ -144,6 +144,63 @@ header .nav-mobile .d-flex{
 }
 
 
+header #main-menu{
+    display: none;
+    width: 40%;
+    position: fixed;
+} 
+
+header #main-menu .m-menu-top{
+    background: #307be7;
+    color: white;
+    text-transform: uppercase;
+    
+}
+header #main-menu .m-menu-top .name-user{
+    padding: 18px 0 18px 20px;
+    font-size: 14px;
+}
+header #main-menu .m-menu ul li{
+    margin: 20px 0 20px 20px;
+    list-style-type: none;
+}
+header #main-menu .m-menu a{
+    color: #4d4d4d;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header #main-menu .m-menu a:hover{
+    color: #307be7;
+    text-decoration: none;
+}
+
+header #main-menu .m-menu .fa::before,
+header #main-menu .m-menu .fab::before,
+header #main-menu .m-menu .fad::before,
+header #main-menu .m-menu .fal::before,
+header #main-menu .m-menu .far::before,
+header #main-menu .m-menu .fas::before{
+    margin-right: 15px;
+}
+
+
+header #main-menu .m-menu .left-support a{
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+header #main-menu .btn-hide{
+    position: absolute;
+    top: -6px;
+    right: -20px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    color: white;
+}
 
 
 /* =============================================

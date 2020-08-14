@@ -1,0 +1,16 @@
+$(document).ready(function(){
+    $("#toggle-menu").click(function(){
+        $("#main-menu").css({
+            "display":"block",
+            "position":"absolute",
+            "background":"white",
+            "top":0,
+            "left":0
+        })
+    })
+    $(".btn-hide").click(function(){
+        $("#main-menu").css({
+            "display":"none"
+        })
+    })
+});
