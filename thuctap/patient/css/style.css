@@ -593,18 +593,21 @@ header #main-menu .btn-hide{
 /*         Aside-info        */
 
 aside.contact-info{
-    width: 87px;
-    position: sticky;
+    width: 90px;
+    position: fixed;
     background-color: #307BE7;
-    left: 92%;
-    bottom: 50%;
+    right: 5px;
+    bottom: 33%;
     border-radius: 10px;
     margin-bottom: 0;
     text-align: center;
     padding: 10px;
     line-height: 30px;
 }
-
+aside.contact-info::before{
+    content: "";
+    margin-top: 30px;
+}
 aside.contact-info a{
     color: #fff;
     font-size: 23px;
@@ -620,7 +623,8 @@ aside.contact-info a span.phonenumber{
 
 aside.contact-info a:hover,
 aside.contact-info a span:hover,
-.btn-navigation-right:hover{
+.btn-navigation-right:hover,
+.btn-navigation-left:hover{
     color:#32f853 ;
     text-decoration: none;
 }
@@ -635,9 +639,9 @@ aside.contact-info a span:hover,
 }
 
  .btn-navigation-left{
-    position: absolute;
+    position: fixed;
     color: #307BE7;
-    bottom: -40px;
+    bottom: 33%;
     right: 30px;
     background: none;
     border: none;

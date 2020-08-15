@@ -5,7 +5,8 @@ $(document).ready(function(){
             "position":"absolute",
             "background":"white",
             "top":0,
-            "left":0
+            "left":0,
+            "z-index":1
         })
     })
     $(".btn-hide").click(function(){
