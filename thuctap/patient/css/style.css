@@ -597,12 +597,13 @@ aside.contact-info{
     position: fixed;
     background-color: #307BE7;
     right: 5px;
-    bottom: 33%;
+    bottom: 40%;
     border-radius: 10px;
     margin-bottom: 0;
     text-align: center;
     padding: 10px;
     line-height: 30px;
+    display: none;
 }
 aside.contact-info::before{
     content: "";
