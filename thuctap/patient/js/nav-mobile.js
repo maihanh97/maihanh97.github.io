@@ -2,7 +2,8 @@ $(document).ready(function(){
     $("#toggle-menu").click(function(){
         $("#main-menu").css({
             "display":"block",
-            "position":"absolute",
+            "position":"fixed",
+            "height":"100%",
             "background":"white",
             "top":0,
             "left":0,
