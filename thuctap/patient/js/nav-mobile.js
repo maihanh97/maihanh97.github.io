@@ -9,13 +9,28 @@ $(document).ready(function(){
             "left":0,
             "z-index":1
         })
+        $("#toggle-menu").css({
+            "display":"none"
+        })
         $("#black-screen").css({
             "display":"block"
+        })
+        $(".nav-mobile").css({
+            "padding-left":"44%"
         })
     })
     $(".btn-hide").click(function(){
         $("#main-menu").css({
             "display":"none"
+        })
+        $("#toggle-menu").css({
+            "display":"inline"
+        })
+        $("#black-screen").css({
+            "display":"none"
+        })
+        $(".nav-mobile").css({
+            "padding-left":0
         })
     })
 });
