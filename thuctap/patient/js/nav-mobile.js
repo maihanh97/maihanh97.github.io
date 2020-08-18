@@ -9,6 +9,9 @@ $(document).ready(function(){
             "left":0,
             "z-index":1
         })
+        $("#black-screen").css({
+            "display":"block"
+        })
     })
     $(".btn-hide").click(function(){
         $("#main-menu").css({
