@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Human Resources</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/map.jpg">
+     <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */ 
+        .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+        }
+        
+        /* Add a gray background color and some padding to the footer */
+        footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+        }
+        footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+
+  footer ul li{
+    display: inline;
+    padding: 10px 10px ;
+  }
+
+  footer ul li:first-child{
+    padding-left: 0;
+  }
+
+  footer a {
+    color: #f5f5f5;
+  }
+
+  footer ul .fb:hover{
+    color: #0B86EE;
+  }
+  /* footer ul .github:hover{
+    color: #24292E;
+    background-origin: white;
+  } */
+  footer ul .linked:hover{
+    color: #0073B1;
+  }
+  footer ul .youtube:hover{
+    color: #FF0000;
+  }
+    </style>
+    </head>
+    <body id="myPage">
+        <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.html">BRAND</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="index.html">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+            </div>
+        </div>
+        </nav>
+
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1>FOUNDER</h1>      
+                <p>Text name..</p>
+                <img src="https://placehold.it/1000x200?text=IMAGE">
+            </div>
+        </div>
+        
+        <div class="container-fluid bg-3 text-center">    
+        <h3>Along with other members</h3><br>
+        <div class="row">
+            <div class="col-sm-3">
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+        </div><br>
+
+        <div class="container-fluid bg-3 text-center">    
+        <div class="row">
+            <div class="col-sm-3">
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3"> 
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+            <div class="col-sm-3">
+            <p>Name..</p>
+            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+            </div>
+        </div>
+        </div><br><br>
+
+        <!-- Footer -->
+        <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            
+            <ul>
+                <li><a href="#" class="fb"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#" class="github"><i class="fab fa-github"></i></a></li>
+                <li><a href="#" class="linked"><i class="fab fa-linkedin-in"></i></a></li>
+                
+            </ul>
+        </footer>
+        <script>
+            $(document).ready(function(){
+            // Initialize Tooltip
+            $('[data-toggle="tooltip"]').tooltip(); 
+            
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+    
+                // Prevent default anchor click behavior
+                event.preventDefault();
+    
+                // Store hash
+                var hash = this.hash;
+    
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+            
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+                } // End if
+            });
+            })
+            </script>
+    </body>
+</html>
