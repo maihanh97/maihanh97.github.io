@@ -4,14 +4,10 @@ import SlashScreen from './src/screens/SlashScreen';
 
 function App() {
   const [time, setTime] = React.useState(false);
-  return (
-    <>
-      {setTimeout(function () {
-        setTime(true);
-      }, 3000)}
-      {time ? <MainScreen /> : <SlashScreen />}
-    </>
-  );
+  setTimeout(function () {
+    setTime(true);
+  }, 3000);
+  return <>{time ? <MainScreen /> : <SlashScreen />}</>;
 }
 
 export default App;
