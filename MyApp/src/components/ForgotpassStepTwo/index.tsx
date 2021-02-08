@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
-import { IC_FORGOTPASS, IC_GOBACK, IC_USER, IC_VERIFICATION } from '../../assets';
+import {Text, View, Image, TouchableOpacity} from 'react-native';
+import {IC_GOBACK, IC_VERIFICATION} from '../../assets';
+import VerificationCode from '../VerificationCode';
 import styles from './ForgotpassStepTwo.style';
-const ForgotpassStepTwo = ({ navigation }: any) => {
+const ForgotpassStepTwo = ({navigation}: any) => {
   const Header = () => {
     return (
       <View style={styles.header}>
-        <Image source={IC_GOBACK} style={styles.icBack} />
-        <Text style={styles.txtHeader}>Forgot Password</Text>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
+          <Image source={IC_GOBACK} style={styles.icBack} />
+        </TouchableOpacity>
+        <Text style={styles.txtHeader}>Back</Text>
       </View>
-    )
-  }
+    );
+  };
 
   const Content = () => {
     return (
@@ -21,19 +24,26 @@ const ForgotpassStepTwo = ({ navigation }: any) => {
           </View>
         </View>
 
-        <Text style={styles.txt}>Please enter your registered phonenumber.</Text>
-        <Text style={styles.desc}>We will send a verification code to your registered phonenumber.</Text>
+        <Text style={styles.txt}>
+          Please enter your registered phonenumber.
+        </Text>
+        <Text style={styles.desc}>
+          We will send a verification code to your registered phonenumber.
+        </Text>
 
+        {/* Verification Code */}
+        <VerificationCode />
 
-        <TouchableOpacity style={styles.btnNext} onPress={() => navigation.navigate("ForgotpassStepTwo")}>
+        <TouchableOpacity
+          style={styles.btnNext}
+          onPress={() => navigation.navigate('ForgotpassStepThree')}>
           <Text style={styles.txtBtn}>Done</Text>
         </TouchableOpacity>
       </View>
-    )
-
-  }
+    );
+  };
   return (
-    <View style={styles.container} >
+    <View style={styles.container}>
       <Header />
       <Content />
     </View>

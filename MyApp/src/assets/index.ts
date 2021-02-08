@@ -1,6 +1,7 @@
 // SCREEN
 export const LOGIN_SCREEN = require('./image/loginscreen.jpg');
 export const MAIN_SCREEN = require('./image/mainscreen.jpg');
+export const SIGNUP_SCREEN = require('./image/signupscreen.jpg')
 
 
 // ICON
@@ -13,6 +14,12 @@ export const IC_GOBACK2 = require('./icons/ic-goBack2.png');
 export const IC_FORGOTPASS = require('./icons/forgot-pass.png');
 export const IC_VERIFICATION = require('./icons/ic-verification.png')
 export const IC_USER = require('./icons/user.png');
+export const IC_USER2 = require('./icons/ic_user.png');
+export const IC_EYE = require('./icons/icon_eye.png');
+export const IC_EYE_SHOW = require('./icons/ic_eye_show.png');
+export const IC_PASSWORD = require('./icons/ic-password.png');
+export const IC_MAIL = require('./icons/ic-mail.png');
+export const IC_CHECKBOX = require('./icons/ic-checkbox.png');
 
 
 // LOGO

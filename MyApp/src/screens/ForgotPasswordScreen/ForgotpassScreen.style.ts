@@ -24,7 +24,7 @@ export default StyleSheet.create({
     marginTop: 15
   },
   imgContainer: {
-    backgroundColor: '#F7F7F7',
+    backgroundColor: '#e5e5e5',
     width: 150,
     height: 150,
     padding: 20,
@@ -35,7 +35,7 @@ export default StyleSheet.create({
     marginBottom: 30
   },
   bgImg: {
-    backgroundColor: '#E5E5E5',
+    backgroundColor: '#b1b1b1',
     borderRadius: 100,
     width: 120,
     height: 120,
@@ -57,6 +57,29 @@ export default StyleSheet.create({
     color: '#B9BECA',
     marginBottom: 20,
     width: '80%'
+  },
+  input: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: '#ddd',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    borderRadius: 5,
+    width: '80%',
+    marginBottom: 10
+  },
+  imgUser: {
+    width: 22,
+    height: 22,
+    marginRight: 10,
+    tintColor: 'black'
+  },
+  txtInput: {
+
   },
   btnNext: {
     backgroundColor: '#F5C142',
