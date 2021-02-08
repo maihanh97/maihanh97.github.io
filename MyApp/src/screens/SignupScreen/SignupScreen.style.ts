@@ -7,7 +7,7 @@ export default StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "contain",
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   header:{
     display: 'flex',
@@ -19,11 +19,13 @@ export default StyleSheet.create({
     width: 20,
     height: 20, 
     marginRight: 10,
-    marginLeft: 10
+    marginLeft: 10,
+    tintColor:'#4477F9',
   },
   txtHeader:{
     fontWeight: 'bold',
-    fontSize: 16
+    fontSize: 16,
+    color:'#4477F9',
   },
   content:{
     display: 'flex',

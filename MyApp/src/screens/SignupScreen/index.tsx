@@ -94,7 +94,7 @@ const SignupScreen = ({navigation}: any) => {
       <FlatList data={inputData} renderItem={({item}) => renderItem(item)} />
 
       <View style={styles.confirm}>
-        {checkBox ? (
+        {!checkBox ? (
           <TouchableOpacity
             style={styles.checkbox}
             onPress={() => confirm()}></TouchableOpacity>
