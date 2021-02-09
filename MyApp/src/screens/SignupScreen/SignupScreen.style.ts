@@ -74,7 +74,7 @@ export default StyleSheet.create({
   checkboxed:{
     width: 20,
     height: 20,
-    borderColor: 'gray',
+    borderColor: '#4477F9',
     borderWidth: 1,
     backgroundColor: '#4477F9',
     justifyContent: 'center',

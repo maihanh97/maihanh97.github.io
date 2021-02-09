@@ -1,6 +1,6 @@
-import {Item} from 'native-base';
 import * as React from 'react';
 import {
+  Alert,
   FlatList,
   Image,
   ImageBackground,
@@ -9,7 +9,6 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import {acc} from 'react-native-reanimated';
 import {
   IC_CHECKBOX,
   IC_GOBACK2,
@@ -62,7 +61,14 @@ const SignupScreen = ({navigation}: any) => {
     },
   ];
 
-  const handleSubmit = () => console.log(account);
+  const handleSubmit = () => {
+    if (account.name.length === 0) {
+      Alert.alert('Name are not empty');
+    } else if (!checkBox) {
+      Alert.alert('You need confirm my Terms & Condition');
+    }
+    console.log(account);
+  };
 
   const Header = () => (
     <View>

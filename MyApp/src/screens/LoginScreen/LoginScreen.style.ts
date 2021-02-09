@@ -17,7 +17,7 @@ export default StyleSheet.create({
 
   },
   ic_back: {
-    transform: [{ scale: 0.3 }],
+    transform: [{ scale: 0.2 }],
     tintColor: 'white'
   },
   txtHeader: {
@@ -27,7 +27,6 @@ export default StyleSheet.create({
   },
   signinContainer: {
     width: "95%",
-    display: 'flex',
     flexDirection: 'column',
     backgroundColor: 'white',
     marginBottom: '5%',
@@ -35,7 +34,6 @@ export default StyleSheet.create({
     padding: 10,
   },
   signinFB: {
-    display: "flex",
     flexDirection: 'row',
     justifyContent: "center",
     alignItems: 'center',
@@ -54,7 +52,7 @@ export default StyleSheet.create({
     borderColor: "#ddd",
     marginTop: 15,
     borderRadius: 5,
-
+    marginBottom: 15
   },
   inputEmail: {
     borderBottomColor: '#ddd',

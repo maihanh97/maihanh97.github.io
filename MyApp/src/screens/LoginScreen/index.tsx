@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
   Alert,
   Image,
@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { IC_FACEBOOK, IC_GOBACK, LOGIN_SCREEN } from '../../assets';
+import {IC_FACEBOOK, IC_GOBACK, LOGIN_SCREEN} from '../../assets';
 import styles from './LoginScreen.style';
 
 interface Props {
@@ -16,19 +16,19 @@ interface Props {
 }
 
 const LoginScreen = (props: Props) => {
-  const { navigation } = props;
+  const {navigation} = props;
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
 
-  const changeEmail = (value: any) => setUser({ ...user, email: value });
-  const changePassword = (value: any) => setUser({ ...user, password: value });
+  const changeEmail = (value: string) => setUser({...user, email: value});
+  const changePassword = (value: string) => setUser({...user, password: value});
 
   const handleSubmitSignIn = (e: any) => {
     e.preventDefault();
     if (user.email == 'admin' && user.password == '123') {
-      navigation.navigate('HomeScreen');
+      navigation.navigate('HomeStack');
       console.log('ok');
     } else {
       console.log(user);
@@ -73,7 +73,8 @@ const LoginScreen = (props: Props) => {
             <Text style={styles.txt}>Sign In</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity onPress={() => navigation.navigate("ForgotpassScreen")}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgotpassScreen')}>
             <Text style={styles.forgotPass}>Forgot your password?</Text>
           </TouchableOpacity>
         </View>

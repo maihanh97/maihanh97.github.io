@@ -1,15 +1,17 @@
 import * as React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
-const SettingScreen = () => {
+interface NotificationScreenProps {}
+
+const NotificationScreen = (props: NotificationScreenProps) => {
   return (
     <View style={styles.container}>
-      <Text>SettingScreen</Text>
+      <Text>NotificationScreen</Text>
     </View>
   );
 };
 
-export default SettingScreen;
+export default NotificationScreen;
 
 const styles = StyleSheet.create({
   container: {},

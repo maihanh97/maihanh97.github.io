@@ -23,7 +23,8 @@ export const IC_CHECKBOX = require('./icons/ic-checkbox.png');
 
 
 // LOGO
-export const LOGO_APP = require('./image/logo-app.png')
+export const LOGO_APP = require('./image/logo-app.png');
+export const BG_LOGO = require('./image/bglogo.jpg');
 
 
 // MENU CATEGORY

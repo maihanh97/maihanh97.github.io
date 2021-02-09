@@ -32,7 +32,8 @@ export default StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 30
+    marginBottom: 50,
+    marginTop: 30
   },
   bgImg: {
     backgroundColor: '#b1b1b1',
@@ -79,7 +80,7 @@ export default StyleSheet.create({
     tintColor: 'black'
   },
   txtInput: {
-
+    width: '80%'
   },
   btnNext: {
     backgroundColor: '#F5C142',
