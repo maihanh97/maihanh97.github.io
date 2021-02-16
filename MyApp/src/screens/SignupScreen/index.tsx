@@ -19,13 +19,19 @@ import {
 } from '../../assets';
 import styles from './SignupScreen.style';
 
-const SignupScreen = ({navigation}: any) => {
+interface UseModel {
+  name: string,
+  email: string,
+  password: string
+}
+
+const SignupScreen = ({ navigation }: any) => {
   const [checkBox, setCheckBox] = React.useState(false);
   const confirm = () => setCheckBox(!checkBox);
-  const [account, setAccount] = React.useState({
-    name: '',
-    email: '',
-    password: '',
+  const [account, setAccount] = React.useState<UseModel>({
+    name: "",
+    email: "",
+    password: "",
   });
 
   const inputData = [
@@ -34,7 +40,7 @@ const SignupScreen = ({navigation}: any) => {
       placeholder: 'Name',
       icon: IC_USER2,
       func: (value: any) => {
-        setAccount({...account, name: value});
+        setAccount({ ...account, name: value });
       },
       secure: false,
       value: account.name,
@@ -44,7 +50,7 @@ const SignupScreen = ({navigation}: any) => {
       placeholder: 'Email',
       icon: IC_MAIL,
       func: (value: any) => {
-        setAccount({...account, email: value});
+        setAccount({ ...account, email: value });
       },
       secure: false,
       value: account.email,
@@ -54,7 +60,7 @@ const SignupScreen = ({navigation}: any) => {
       placeholder: 'Password',
       icon: IC_PASSWORD,
       func: (value: any) => {
-        setAccount({...account, password: value});
+        setAccount({ ...account, password: value });
       },
       secure: true,
       value: account.password,
@@ -97,7 +103,10 @@ const SignupScreen = ({navigation}: any) => {
 
   const SignupContainer = () => (
     <View style={styles.content}>
-      <FlatList data={inputData} renderItem={({item}) => renderItem(item)} />
+      <FlatList
+        data={inputData}
+        renderItem={({ item }) => renderItem(item)}
+        keyExtractor={(item) => item.id.toString()} />
 
       <View style={styles.confirm}>
         {!checkBox ? (
@@ -105,10 +114,10 @@ const SignupScreen = ({navigation}: any) => {
             style={styles.checkbox}
             onPress={() => confirm()}></TouchableOpacity>
         ) : (
-          <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
-            <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
-          </TouchableOpacity>
-        )}
+            <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
+              <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
+            </TouchableOpacity>
+          )}
         <Text style={styles.agree}>I agree to the </Text>
         <Text style={styles.terms}>Terms & Conditions</Text>
       </View>

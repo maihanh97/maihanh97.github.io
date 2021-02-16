@@ -20,6 +20,8 @@ export const IC_EYE_SHOW = require('./icons/ic_eye_show.png');
 export const IC_PASSWORD = require('./icons/ic-password.png');
 export const IC_MAIL = require('./icons/ic-mail.png');
 export const IC_CHECKBOX = require('./icons/ic-checkbox.png');
+export const IC_RESETPASS = require('./icons/reset-password.png');
+export const IC_KEY = require('./icons/ic-key.png');
 
 
 // LOGO

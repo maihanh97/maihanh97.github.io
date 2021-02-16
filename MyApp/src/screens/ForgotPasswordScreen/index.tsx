@@ -7,15 +7,15 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import {IC_FORGOTPASS, IC_GOBACK, IC_USER} from '../../assets';
+import { IC_FORGOTPASS, IC_GOBACK, IC_USER } from '../../assets';
 import styles from './ForgotpassScreen.style';
-const ForgotpassScreen = ({navigation}: any) => {
+const ForgotpassScreen = ({ navigation }: any) => {
   const [phone, setPhone] = React.useState('');
 
   const changePhone = (value: any) => setPhone(value);
   const handleSubmit = () => {
     var regEx = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    if (regEx.test(phone)) {
+    if (!regEx.test(phone)) {
       navigation.navigate('ForgotpassStepTwo');
     } else {
       Alert.alert('Incorrect phone number format');
