@@ -4,6 +4,7 @@ import {
   FlatList,
   Image,
   ImageBackground,
+  NativeModules,
   Text,
   TextInput,
   TouchableOpacity,
@@ -18,62 +19,94 @@ import {
   SIGNUP_SCREEN,
 } from '../../assets';
 import styles from './SignupScreen.style';
+import DeviceInfo from 'react-native-device-info';
+import {useDispatch} from 'react-redux';
+import {signupAccount} from '../../redux/actions/UserAction';
 
-interface UseModel {
-  name: string,
-  email: string,
-  password: string
-}
-
-const SignupScreen = ({ navigation }: any) => {
+const SignupScreen = ({navigation}: any) => {
   const [checkBox, setCheckBox] = React.useState(false);
   const confirm = () => setCheckBox(!checkBox);
-  const [account, setAccount] = React.useState<UseModel>({
-    name: "",
-    email: "",
-    password: "",
+  const [account, setAccount] = React.useState({
+    name: '',
+    email: '',
+    password: '',
   });
+  const dispatch = useDispatch();
 
   const inputData = [
     {
       id: 1,
       placeholder: 'Name',
       icon: IC_USER2,
-      func: (value: any) => {
-        setAccount({ ...account, name: value });
-      },
+      func: (value: any) => setAccount({...account, name: value}),
       secure: false,
       value: account.name,
+      capitalize: 'words',
     },
     {
       id: 2,
       placeholder: 'Email',
       icon: IC_MAIL,
-      func: (value: any) => {
-        setAccount({ ...account, email: value });
-      },
+      func: (value: any) => setAccount({...account, email: value}),
       secure: false,
       value: account.email,
+      capitalize: 'none',
     },
     {
       id: 3,
       placeholder: 'Password',
       icon: IC_PASSWORD,
-      func: (value: any) => {
-        setAccount({ ...account, password: value });
-      },
+      func: (value: any) => setAccount({...account, password: value}),
       secure: true,
       value: account.password,
+      capitalize: 'none',
     },
   ];
 
-  const handleSubmit = () => {
-    if (account.name.length === 0) {
-      Alert.alert('Name are not empty');
-    } else if (!checkBox) {
-      Alert.alert('You need confirm my Terms & Condition');
+  const checkData = () => {
+    if (account.name.length == 0) {
+      Alert.alert('Names cannot be empty');
+      return false;
     }
-    console.log(account);
+
+    const regEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (!regEx.test(account.email)) {
+      Alert.alert('Email invalidate');
+      return false;
+    }
+
+    if (account.password.length < 8) {
+      Alert.alert('Password must be greater than 8 characters');
+      return false;
+    }
+
+    return true;
+  };
+
+  const handleSubmit = async () => {
+    const deviceId = await DeviceInfo.getUniqueId();
+    if (checkData() && checkBox) {
+      try {
+        const payload = {
+          access_token: '',
+          expired_time: '',
+          name: account.name,
+          email: account.email,
+          password: account.password,
+          address: '',
+          avatar: '',
+          user_id: deviceId,
+          gender: '',
+          phone: '',
+        };
+        dispatch(signupAccount(payload));
+        navigation.navigate('HomeStack');
+      } catch (err) {
+        console.log('====================================');
+        console.log('err sign up : ', err);
+        console.log('====================================');
+      }
+    }
   };
 
   const Header = () => (
@@ -97,6 +130,7 @@ const SignupScreen = ({ navigation }: any) => {
         secureTextEntry={item.secure}
         style={styles.txtInput}
         value={item.value}
+        autoCapitalize={item.capitalize}
       />
     </View>
   );
@@ -105,8 +139,9 @@ const SignupScreen = ({ navigation }: any) => {
     <View style={styles.content}>
       <FlatList
         data={inputData}
-        renderItem={({ item }) => renderItem(item)}
-        keyExtractor={(item) => item.id.toString()} />
+        renderItem={({item}) => renderItem(item)}
+        keyExtractor={(item) => item.id.toString()}
+      />
 
       <View style={styles.confirm}>
         {!checkBox ? (
@@ -114,10 +149,10 @@ const SignupScreen = ({ navigation }: any) => {
             style={styles.checkbox}
             onPress={() => confirm()}></TouchableOpacity>
         ) : (
-            <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
-              <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
-            </TouchableOpacity>
-          )}
+          <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
+            <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
+          </TouchableOpacity>
+        )}
         <Text style={styles.agree}>I agree to the </Text>
         <Text style={styles.terms}>Terms & Conditions</Text>
       </View>

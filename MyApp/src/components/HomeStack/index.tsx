@@ -6,8 +6,11 @@ import HomeScreen from '../../screens/HomeScreen';
 import NotificationScreen from '../../screens/NotificationScreen';
 import ProfileScreen from '../../screens/ProfileScreen';
 const Tab = createBottomTabNavigator();
+import {useSelector} from 'react-redux';
 
 const HomeStack = () => {
+  const user = useSelector((state: any) => state.signupAccount);
+  console.log('user', user);
   return (
     <Tab.Navigator
       screenOptions={({route}) => ({
