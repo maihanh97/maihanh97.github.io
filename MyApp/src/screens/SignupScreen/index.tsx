@@ -19,11 +19,10 @@ import {
   SIGNUP_SCREEN,
 } from '../../assets';
 import styles from './SignupScreen.style';
-import DeviceInfo from 'react-native-device-info';
-import {useDispatch} from 'react-redux';
-import {signupAccount} from '../../redux/actions/UserAction';
+import { useDispatch } from 'react-redux';
+import { signupAccount } from '../../redux/actions/UserAction';
 
-const SignupScreen = ({navigation}: any) => {
+const SignupScreen = ({ navigation }: any) => {
   const [checkBox, setCheckBox] = React.useState(false);
   const confirm = () => setCheckBox(!checkBox);
   const [account, setAccount] = React.useState({
@@ -38,7 +37,7 @@ const SignupScreen = ({navigation}: any) => {
       id: 1,
       placeholder: 'Name',
       icon: IC_USER2,
-      func: (value: any) => setAccount({...account, name: value}),
+      func: (value: any) => setAccount({ ...account, name: value }),
       secure: false,
       value: account.name,
       capitalize: 'words',
@@ -47,7 +46,7 @@ const SignupScreen = ({navigation}: any) => {
       id: 2,
       placeholder: 'Email',
       icon: IC_MAIL,
-      func: (value: any) => setAccount({...account, email: value}),
+      func: (value: any) => setAccount({ ...account, email: value }),
       secure: false,
       value: account.email,
       capitalize: 'none',
@@ -56,7 +55,7 @@ const SignupScreen = ({navigation}: any) => {
       id: 3,
       placeholder: 'Password',
       icon: IC_PASSWORD,
-      func: (value: any) => setAccount({...account, password: value}),
+      func: (value: any) => setAccount({ ...account, password: value }),
       secure: true,
       value: account.password,
       capitalize: 'none',
@@ -83,8 +82,7 @@ const SignupScreen = ({navigation}: any) => {
     return true;
   };
 
-  const handleSubmit = async () => {
-    const deviceId = await DeviceInfo.getUniqueId();
+  const handleSubmit = () => {
     if (checkData() && checkBox) {
       try {
         const payload = {
@@ -95,7 +93,7 @@ const SignupScreen = ({navigation}: any) => {
           password: account.password,
           address: '',
           avatar: '',
-          user_id: deviceId,
+          user_id: '',
           gender: '',
           phone: '',
         };
@@ -139,7 +137,7 @@ const SignupScreen = ({navigation}: any) => {
     <View style={styles.content}>
       <FlatList
         data={inputData}
-        renderItem={({item}) => renderItem(item)}
+        renderItem={({ item }) => renderItem(item)}
         keyExtractor={(item) => item.id.toString()}
       />
 
@@ -149,10 +147,10 @@ const SignupScreen = ({navigation}: any) => {
             style={styles.checkbox}
             onPress={() => confirm()}></TouchableOpacity>
         ) : (
-          <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
-            <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
-          </TouchableOpacity>
-        )}
+            <TouchableOpacity style={styles.checkboxed} onPress={() => confirm()}>
+              <Image source={IC_CHECKBOX} style={styles.icCheckbox} />
+            </TouchableOpacity>
+          )}
         <Text style={styles.agree}>I agree to the </Text>
         <Text style={styles.terms}>Terms & Conditions</Text>
       </View>

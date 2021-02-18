@@ -1,6 +1,6 @@
 import * as React from 'react';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import rootReducer from './src/redux/reducers/rootReducer';
 import MainScreen from './src/screens/MainScreen';
 import SlashScreen from './src/screens/SlashScreen';
