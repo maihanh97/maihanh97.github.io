@@ -22,6 +22,8 @@
     "native-base": "^2.15.2",
     "react": "16.13.1",
     "react-native": "^0.63.4",
+    "react-native-chart-kit": "^6.11.0",
+    "react-native-charts-wrapper": "^0.5.7",
     "react-native-collapsing-toolbar": "^1.0.0-beta.10",
     "react-native-confirmation-code-field": "^7.0.0",
     "react-native-device-info": "^8.0.1",
@@ -34,6 +36,7 @@
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.17.1",
     "react-native-sms-verifycode": "^2.4.3",
+    "react-native-step-modal": "^1.2.1",
     "react-native-vector-icons": "^8.0.0",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5"
